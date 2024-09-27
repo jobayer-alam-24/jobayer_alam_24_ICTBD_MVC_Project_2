@@ -1,3 +1,6 @@
+@{
+    Address address = ViewData["addressObject"] as Address;
+}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +14,8 @@
 </head>
 
 <body>
+   
+
     <div class="container">
         <div class="row">
             <!-- First Card -->
@@ -25,6 +30,8 @@
                         <h5 class="text-secondary">Grade: @ViewData["grade1"]</h5>
                         <h5 class="text-secondary">Department: @ViewData["department1"]</h3>
                         <h5 class="text-secondary">Class Captain (Male): @ViewData["captain2"]</h3>
+                        <h5 class="text-secondary">Address: @address.City, @address.Region,  @address.Country</h3>
+                        <h5 class="text-secondary">Postal Code: @address.PostalCode</h3>
                     </div>
                 </div>
             </div>
@@ -41,6 +48,8 @@
                         <h5 class="text-secondary">Department: @ViewData["department2"]</h5>
                         <h5 
                         class="text-secondary">Class Captain (Female): @ViewBag.IsClassCaptain</h5>
+                        <h5 class="text-secondary">Address: @address.City, @address.Region,  @address.Country</h3>
+                        <h5 class="text-secondary">Postal Code: @address.PostalCode</h3>
                     </div>
                 </div>
             </div>
@@ -55,12 +64,14 @@
                         <h5 class="text-secondary">Grade: @ViewBag.Grade3</h5>
                         <h5 class="text-secondary">Department: @ViewData["department3"] </h5>
                         <h5 class="text-secondary">Angry Mode: @ViewData["angryMode"]</h5>
+                        <h5 class="text-secondary">Address: @address.City, @address.Region,  @address.Country</h3>
+                        <h5 class="text-secondary">Postal Code: @address.PostalCode</h3>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

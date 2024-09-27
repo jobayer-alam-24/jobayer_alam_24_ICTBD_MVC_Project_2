@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.Sockets;
 using System.Threading.Tasks;
+using jobayer_alam_24_ICTBD_MVC_Project_2.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -43,6 +45,15 @@ namespace jobayer_alam_24_ICTBD_MVC_Project_2.Controllers
             ViewData["department3"] = "Electronics";
             ViewBag.Grade3 = 5.00;
             ViewData["angryMode"] = "Furious";
+
+            Address addresses = new Address()
+            {
+                City = "Dhaka",
+                Region = "Mirpur 10",
+                PostalCode = "4442",
+                Country = "Bangladesh"
+            };
+            ViewData["addressObject"] = addresses;
 
             return View();
         }
