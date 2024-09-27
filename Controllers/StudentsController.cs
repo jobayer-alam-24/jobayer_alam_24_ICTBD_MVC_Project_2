@@ -55,6 +55,9 @@ namespace jobayer_alam_24_ICTBD_MVC_Project_2.Controllers
             };
             ViewData["addressObject"] = addresses;
 
+            BookLists bookLists = new BookLists();
+            ViewData["bookLists"] = bookLists;
+
             return View();
         }
 

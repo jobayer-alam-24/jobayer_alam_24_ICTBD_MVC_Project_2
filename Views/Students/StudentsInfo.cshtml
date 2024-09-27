@@ -1,5 +1,7 @@
 @{
     Address address = ViewData["addressObject"] as Address;
+    BookLists bookLists = (BookLists)ViewData["bookLists"];
+    List<string> listsOfBooks = bookLists.BookNames();
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +16,7 @@
 </head>
 
 <body>
-   
+
 
     <div class="container">
         <div class="row">
@@ -29,9 +31,10 @@
                         <h5 class="text-secondary">Roll: @ViewBag.Roll_one</h5>
                         <h5 class="text-secondary">Grade: @ViewData["grade1"]</h5>
                         <h5 class="text-secondary">Department: @ViewData["department1"]</h3>
-                        <h5 class="text-secondary">Class Captain (Male): @ViewData["captain2"]</h3>
-                        <h5 class="text-secondary">Address: @address.City, @address.Region,  @address.Country</h3>
-                        <h5 class="text-secondary">Postal Code: @address.PostalCode</h3>
+                            <h5 class="text-secondary">Class Captain (Male): @ViewData["captain2"]</h3>
+                                <h5 class="text-secondary">Address: @address.City, @address.Region, @address.Country
+                                    </h3>
+                                    <h5 class="text-secondary">Postal Code: @address.PostalCode</h3>
                     </div>
                 </div>
             </div>
@@ -44,12 +47,10 @@
                         <h5 class="text-secondary">Age: @ViewBag.Age_two</h5>
                         <h5 class="text-secondary">Roll: @ViewBag.Roll_two</h5>
                         <h5 class="text-secondary">Grade: @ViewData["grade2"]</h5>
-                        <h5 
-                        <h5 class="text-secondary">Department: @ViewData["department2"]</h5>
-                        <h5 
-                        class="text-secondary">Class Captain (Female): @ViewBag.IsClassCaptain</h5>
-                        <h5 class="text-secondary">Address: @address.City, @address.Region,  @address.Country</h3>
-                        <h5 class="text-secondary">Postal Code: @address.PostalCode</h3>
+                        <h5 <h5 class="text-secondary">Department: @ViewData["department2"]</h5>
+                        <h5 class="text-secondary">Class Captain (Female): @ViewBag.IsClassCaptain</h5>
+                        <h5 class="text-secondary">Address: @address.City, @address.Region, @address.Country</h3>
+                            <h5 class="text-secondary">Postal Code: @address.PostalCode</h3>
                     </div>
                 </div>
             </div>
@@ -64,14 +65,29 @@
                         <h5 class="text-secondary">Grade: @ViewBag.Grade3</h5>
                         <h5 class="text-secondary">Department: @ViewData["department3"] </h5>
                         <h5 class="text-secondary">Angry Mode: @ViewData["angryMode"]</h5>
-                        <h5 class="text-secondary">Address: @address.City, @address.Region,  @address.Country</h3>
-                        <h5 class="text-secondary">Postal Code: @address.PostalCode</h3>
+                        <h5 class="text-secondary">Address: @address.City, @address.Region, @address.Country</h3>
+                            <h5 class="text-secondary">Postal Code: @address.PostalCode</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="card p-3 shadow-sm">
+                    <h1 class="text-center text-primary">BookLists</h1>
+                    <div class="border-top pt-2">
+                        <ul>
+                            @foreach (var book in listsOfBooks)
+                            {
+                                <h4><li type="1">@book</li></h4>
+                            }
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
