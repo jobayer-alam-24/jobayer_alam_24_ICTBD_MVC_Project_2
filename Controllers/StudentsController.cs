@@ -19,7 +19,31 @@ namespace jobayer_alam_24_ICTBD_MVC_Project_2.Controllers
 
         public IActionResult StudentsInfo()
         {
-           
+            
+            ViewBag.ID_one = 1;
+            ViewData["name1"] = "Sheikh Jobayer Alam";
+            ViewBag.Age_one = 13;
+            ViewBag.Roll_one = 2;
+            ViewData["department1"] = "IT Support & IOT";
+            ViewData["grade1"] = 5.00;
+            ViewData["captain2"] = false;
+
+            ViewBag.ID_two = 2;
+            ViewData["name2"] = "Raisa Sultana";
+            ViewData["department2"] = "Electronics";
+            ViewBag.Roll_two = 1;
+            ViewBag.Age_two = 11;
+            ViewBag.IsClassCaptain = true;
+            ViewData["grade2"] = 5.00;
+
+            ViewBag.ID_three = 3;
+            ViewData["name3"] = "Tasnim Karim";
+            ViewBag.Age_three = 13;
+            ViewBag.Roll_three = 3;
+            ViewData["department3"] = "Electronics";
+            ViewBag.Grade3 = 5.00;
+            ViewData["angryMode"] = "Furious";
+
             return View();
         }
 

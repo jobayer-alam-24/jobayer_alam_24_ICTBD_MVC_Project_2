@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,12 +9,61 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/jobayer_alam_24_ICTBD_MVC_Project_2.styles.css" asp-append-version="true" />
 </head>
-<body>
 
-    
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- First Card -->
+            <div class="col-md-4">
+                <div class="card p-3 shadow-sm">
+                    <h1 class="text-center text-primary">Students Info</h1>
+                    <div class="border-top pt-2">
+                        <h5 class="text-secondary">ID: @ViewBag.ID_one</h5>
+                        <h5 class="text-secondary">Name: @ViewData["name1"]</h5>
+                        <h5 class="text-secondary">Age: @ViewBag.Age_one</h5>
+                        <h5 class="text-secondary">Roll: @ViewBag.Roll_one</h5>
+                        <h5 class="text-secondary">Grade: @ViewData["grade1"]</h5>
+                        <h5 class="text-secondary">Department: @ViewData["department1"]</h3>
+                        <h5 class="text-secondary">Class Captain (Male): @ViewData["captain2"]</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3 shadow-sm">
+                    <h1 class="text-center text-primary">Students Info</h1>
+                    <div class="border-top pt-2">
+                        <h5 class="text-secondary">ID: @ViewBag.ID_two</h5>
+                        <h5 class="text-secondary">Name: @ViewData["name2"]</h5>
+                        <h5 class="text-secondary">Age: @ViewBag.Age_two</h5>
+                        <h5 class="text-secondary">Roll: @ViewBag.Roll_two</h5>
+                        <h5 class="text-secondary">Grade: @ViewData["grade2"]</h5>
+                        <h5 
+                        <h5 class="text-secondary">Department: @ViewData["department2"]</h5>
+                        <h5 
+                        class="text-secondary">Class Captain (Female): @ViewBag.IsClassCaptain</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3 shadow-sm">
+                    <h1 class="text-center text-primary">Students Info</h1>
+                    <div class="border-top pt-2">
+                        <h5 class="text-secondary">ID: @ViewBag.ID_three</h5>
+                        <h5 class="text-secondary">Name: @ViewData["name3"]</h5>
+                        <h5 class="text-secondary">Age: @ViewBag.Age_three</h5>
+                        <h5 class="text-secondary">Roll: @ViewBag.Roll_three</h5>
+                        <h5 class="text-secondary">Grade: @ViewBag.Grade3</h5>
+                        <h5 class="text-secondary">Department: @ViewData["department3"] </h5>
+                        <h5 class="text-secondary">Angry Mode: @ViewData["angryMode"]</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 </body>
+
 </html>
