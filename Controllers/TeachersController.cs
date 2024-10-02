@@ -28,7 +28,7 @@ namespace jobayer_alam_24_ICTBD_MVC_Project_2.Controllers
                 TempData["email"] = teachersData.Email;
                 TempData["phone"] = teachersData.PhoneNumber;
                 TempData["subject"] = teachersData.SpecialSubject;
-                ViewData["ex"] = teachersData.ExperienceYear;
+                TempData["ex"] = teachersData.ExperienceYear;
 
                 return RedirectToAction("TeachersInfoData");
             }
