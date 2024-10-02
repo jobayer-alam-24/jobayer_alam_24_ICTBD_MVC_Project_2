@@ -1,0 +1,19 @@
+@{
+    int ExperienceYear = Convert.ToInt32(TempData["ex"]);
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+</head>
+<body>
+    <h1 style="text-align: center;">All Data</h1>
+    <p>Name: @TempData["name"]</p>
+    <p>Email: @TempData["email"]</p>
+    <p>Phone Number: @TempData["phone"]</p>
+    <p>Subject: @TempData["subject"]</p>
+    <p>Experience Year: @ExperienceYear</p>
+</body>
+</html>
